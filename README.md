@@ -1,6 +1,11 @@
 # Starter Kit
 
-A simple Starter Kit using Gulp, Twig and Tailwind
+A simple Starter Kit using Gulp, Twig and TailwindCSS for creating mostly CraftCMS templates.
+
+#### Included a set of basic frontend plugins
+
+- flickity
+- lightgallery.js incl. lg-video.js
 
 #### How to get started?
 
@@ -16,7 +21,4 @@ A simple Starter Kit using Gulp, Twig and Tailwind
 - `npm run dev` is used to monitor your source files for development
 - `npm run build` minified CSS, JS, IMG, HTML files for production
 
-#### Included a set of basic frontend plugins
-
-- flickity
-- lightgallery.js incl. lg-video.js
+Boom :boom:
