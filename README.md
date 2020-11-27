@@ -13,10 +13,10 @@ A simple Starter Kit using Gulp, Twig and Tailwind
 
 #### Run development or production tasks
 
-- `npm run watch` is used to monitor your source files for development
+- `npm run dev` is used to monitor your source files for development
 - `npm run build` minified CSS, JS, IMG, HTML files for production
 
-#### Included Frontend Plugins
+#### Included a set of basic frontend plugins
 
 - flickity
 - lightgallery.js incl. lg-video.js

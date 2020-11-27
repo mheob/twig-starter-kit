@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 // *** Config
-const site = 'starter1.test';
+const site = 'starter-kit.test';
 const folder = {
   src: 'src/',
   dist: 'dist/',
