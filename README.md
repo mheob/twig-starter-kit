@@ -1,4 +1,4 @@
-# Starter Kit GTT
+# Starter Kit
 
 A simple Starter Kit using Gulp, Twig and Tailwind
 
