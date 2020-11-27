@@ -20,3 +20,12 @@ A simple Starter Kit using Gulp, Twig and TailwindCSS for creating mostly CraftC
 
 - `npm run dev` is used to monitor your source files for development
 - `npm run build` minified CSS, JS, IMG, HTML files for production
+
+For ease of use, I recommend creating aliases in the ".bash_profile" file.
+
+For example:
+
+```
+alias rd="npm run dev"
+alias rb="npm run build"
+```
