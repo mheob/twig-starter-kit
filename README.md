@@ -1,4 +1,4 @@
-# Starter Kit
+# Starter Kit :rocket:
 
 A simple Starter Kit using Gulp, Twig and TailwindCSS for creating mostly CraftCMS templates.
 
@@ -20,5 +20,3 @@ A simple Starter Kit using Gulp, Twig and TailwindCSS for creating mostly CraftC
 
 - `npm run dev` is used to monitor your source files for development
 - `npm run build` minified CSS, JS, IMG, HTML files for production
-
-Boom :boom:
