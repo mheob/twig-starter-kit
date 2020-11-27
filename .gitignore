@@ -1,0 +1,11 @@
+# NODE BUILD FILES
+node_modules
+npm-debug.log
+
+# COMPOSER
+**/vendor/**
+
+# DIST
+dist/*
+!dist/index.php
+!dist/templates
