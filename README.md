@@ -1,8 +1,8 @@
 # Starter Kit :rocket:
 
-A simple Starter Kit using Gulp, Twig and TailwindCSS for creating mostly CraftCMS templates.
+A simple Starter Kit using Twig, TailwindCSS and Gulp for creating mostly CraftCMS templates.
 
-#### Included a set of basic frontend plugins
+#### Included a bunch of basic frontend plugins
 
 - flickity
 - lightgallery.js incl. lg-video.js
