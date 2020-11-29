@@ -1,59 +1,61 @@
 {% extends '_layout/_base.twig' %}
 
-<div class="container mt-16">
-  <h2 class="text-6xl">
-    Slider and Carousels
-  </h2>
+{% block content %}
+  <div class="container mt-16">
+    <h2 class="text-6xl">
+      Slider and Carousels
+    </h2>
 
-  <h3>
-    Page Header Slider
-  </h3>
-  <div class="mt-8 ph-slider">
-    <div class="bg-blue-100 slide h-50vh">
-      Slide1xxx
+    <h3>
+      Page Header Slider
+    </h3>
+    <div class="mt-8 ph-slider">
+      <div class="bg-blue-100 slide h-50vh">
+        Slide1xxx
+      </div>
+      <div class="bg-blue-200 slide h-50vh">
+        Slide2
+      </div>
+      <div class="bg-blue-300 slide h-50vh">
+        Slide3
+      </div>
+      <div class="bg-blue-400 slide h-50vh">
+        Slide4
+      </div>
+      <div class="bg-blue-500 slide h-50vh">
+        Slide5
+      </div>
     </div>
-    <div class="bg-blue-200 slide h-50vh">
-      Slide2
-    </div>
-    <div class="bg-blue-300 slide h-50vh">
-      Slide3
-    </div>
-    <div class="bg-blue-400 slide h-50vh">
-      Slide4
-    </div>
-    <div class="bg-blue-500 slide h-50vh">
-      Slide5
+
+    <h3>
+      Page Builder Carousel
+    </h3>
+    <div class="mt-8 -mx-4 pb-carousel">
+      <div class="h-64 px-4 slide">
+        <div class="h-full p-4 bg-green-100">
+          Slide1
+        </div>
+      </div>
+      <div class="h-64 px-4 slide">
+        <div class="h-full p-4 bg-green-200">
+          Slide1
+        </div>
+      </div>
+      <div class="h-64 px-4 slide">
+        <div class="h-full p-4 bg-green-300">
+          Slide1
+        </div>
+      </div>
+      <div class="h-64 px-4 slide">
+        <div class="h-full p-4 bg-green-400">
+          Slide1
+        </div>
+      </div>
+      <div class="h-64 px-4 slide">
+        <div class="h-full p-4 bg-green-500">
+          Slide1
+        </div>
+      </div>
     </div>
   </div>
-
-  <h3>
-    Page Builder Carousel
-  </h3>
-  <div class="mt-8 -mx-4 pb-carousel">
-    <div class="h-64 px-4 slide">
-      <div class="h-full p-4 bg-green-100">
-        Slide1
-      </div>
-    </div>
-    <div class="h-64 px-4 slide">
-      <div class="h-full p-4 bg-green-200">
-        Slide1
-      </div>
-    </div>
-    <div class="h-64 px-4 slide">
-      <div class="h-full p-4 bg-green-300">
-        Slide1
-      </div>
-    </div>
-    <div class="h-64 px-4 slide">
-      <div class="h-full p-4 bg-green-400">
-        Slide1
-      </div>
-    </div>
-    <div class="h-64 px-4 slide">
-      <div class="h-full p-4 bg-green-500">
-        Slide1
-      </div>
-    </div>
-  </div>
-</div>
+{% endblock %}

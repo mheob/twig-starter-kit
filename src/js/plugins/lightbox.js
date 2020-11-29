@@ -15,7 +15,7 @@ lightbox.forEach((item) => {
     },
     share: false,
     download: false,
-    autoplayFirstVideo: false,
+    autoplayFirstVideo: true,
     videoMaxWidth: '1440px',
   });
 });
