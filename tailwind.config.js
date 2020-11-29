@@ -17,6 +17,9 @@ module.exports = {
       center: true,
     },
   },
-  variants: {},
-  plugins: [],
-}
+  variants: {
+    margin: ['responsive', 'first'],
+    padding: ['responsive', 'first'],
+  },
+  plugins: [require('@tailwindcss/aspect-ratio')],
+};
