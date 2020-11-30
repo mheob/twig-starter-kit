@@ -8,6 +8,10 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      display: ['Open Sans'],
+      body: ['Open Sans'],
+    },
     extend: {
       height: {
         '50vh': '50vh',
