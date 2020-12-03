@@ -9,3 +9,6 @@ npm-debug.log
 dist/*
 !dist/index.php
 !dist/templates
+
+# MacOS
+.DS_Store
