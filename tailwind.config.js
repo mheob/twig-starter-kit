@@ -6,7 +6,7 @@ module.exports = {
       safelist: [],
     },
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class' (see: https://tailwindcss.com/docs/dark-mode)
   theme: {
     fontFamily: {
       display: ['Open Sans'],
