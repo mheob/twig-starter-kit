@@ -2,13 +2,19 @@
   "name": "starter-kit",
   "version": "1.0.0",
   "description": "A simple Starter Kit using Gulp, Twig and Tailwind",
+  "license": "ISC",
+  "author": "Comar",
   "main": "src/scripts/app.js",
   "scripts": {
-    "dev": "env NODE_ENV=development gulp dev --development",
-    "build": "env NODE_ENV=production gulp build --production"
+    "build": "env NODE_ENV=production gulp build --production",
+    "dev": "env NODE_ENV=development gulp dev --development"
   },
-  "author": "Comar",
-  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "flickity": "^2.2.1",
+    "lg-video.js": "^1.3.0",
+    "lightgallery.js": "^1.4.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.9.6",
@@ -38,11 +44,5 @@
     "tailwindcss": "^2.0.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "flickity": "^2.2.1",
-    "lg-video.js": "^1.3.0",
-    "lightgallery.js": "^1.4.0"
   }
 }
