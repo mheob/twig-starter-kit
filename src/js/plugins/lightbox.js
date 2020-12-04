@@ -1,11 +1,11 @@
-// lightbox.js
 /* global lightGallery:readable */
+
 import 'lightgallery.js'; // see: https://sachinchoolur.github.io/lightgallery.js/
 import 'lg-video.js'; // see: https://github.com/sachinchoolur/lg-video.js/blob/master/readme.md
 
-// Multiple Lightboxes
-const lightbox = document.querySelectorAll('.lightbox');
-lightbox.forEach((item) => {
+const lightboxes = document.querySelectorAll('.lightbox');
+lightboxes.forEach((item) => {
+  // The lightGallery function comes from the lightgallery.js import.
   lightGallery(item, {
     youtubePlayerParams: {
       modestbranding: 0,

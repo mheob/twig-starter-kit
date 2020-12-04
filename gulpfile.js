@@ -1,23 +1,22 @@
 /* eslint-disable no-undef */
 
-// *** Config
+// Config
 const site = 'starter-kit.test';
 const folder = {
   src: 'src/',
   dist: 'dist/',
 };
-const cleanupFolder = ['dist/css/', 'dist/js/'];
+const cleanupFolder = [`${folder.dist}css/`, `${folder.dist}js/`];
 
-// *** Load Plugins
-
+// Load Plugins
 const { series, parallel, watch, src, dest } = require('gulp');
 const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const browserify = require('browserify');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
-const cleancss = require('gulp-clean-css');
-const gulpif = require('gulp-if');
+const cleanCss = require('gulp-clean-css');
+const gulpIf = require('gulp-if');
 const homedir = require('os').homedir();
 const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
@@ -28,12 +27,10 @@ const uglify = require('gulp-uglify');
 
 const production = process.env.NODE_ENV == 'production' ? true : false;
 
-// *** Clean up
 function cleanUp() {
   return src(cleanupFolder, { read: false, allowEmpty: true }).pipe(clean());
 }
 
-// *** Styles
 function styles() {
   return src([folder.src + 'css/app.pcss'])
     .pipe(
@@ -44,13 +41,12 @@ function styles() {
         require('autoprefixer'),
       ])
     )
-    .pipe(gulpif(production, cleancss()))
+    .pipe(gulpIf(production, cleanCss()))
     .pipe(rename({ basename: 'app', extname: '.css' }))
     .pipe(dest(folder.dist + 'css'))
     .pipe(browserSync.reload({ stream: true }));
 }
 
-// *** Scripts
 function scripts() {
   return browserify({
     entries: folder.src + 'js/app.js',
@@ -68,19 +64,17 @@ function scripts() {
     )
     .pipe(source('app.js'))
     .pipe(buffer())
-    .pipe(gulpif(production, uglify()))
+    .pipe(gulpIf(production, uglify()))
     .pipe(dest(folder.dist + 'js'))
     .pipe(browserSync.stream());
 }
 
-// *** Fonts
 function fonts() {
   return src(folder.src + 'fonts/**/*')
     .pipe(dest(folder.dist + 'fonts'))
     .pipe(browserSync.stream());
 }
 
-// *** Images
 function images() {
   return src(folder.src + 'assets/**/*')
     .pipe(imagemin())
@@ -88,19 +82,19 @@ function images() {
     .pipe(browserSync.stream());
 }
 
-// *** BrowserSync
-function browser(done) {
+function initBrowserSync(done) {
+  const defaultPort = 3000;
   browserSync.init({
     proxy: `https://${site}`,
     host: site,
-    port: 3000,
+    port: defaultPort,
     open: false,
     notify: true,
     https: {
       key: `${homedir}/.config/valet/Certificates/${site}.key`,
       cert: `${homedir}/.config/valet/Certificates/${site}.crt`,
     },
-    ui: { port: 3000 + 1 },
+    ui: { port: defaultPort + 1 },
   });
   done();
 }
@@ -110,7 +104,6 @@ function reload(done) {
   done();
 }
 
-// *** Watch tasks
 function watchFiles() {
   watch(folder.src + 'css/**/*', series(styles, reload));
   watch('tailwind.config.js', styles);
@@ -119,12 +112,11 @@ function watchFiles() {
   watch(folder.src + '**/*.+(html|php|twig)', reload);
 }
 
-// *** Export tasks
 exports.build = series(cleanUp, parallel(styles, scripts, images, fonts));
 exports.dev = series(
   cleanUp,
   parallel(styles, scripts, images, fonts),
-  browser,
+  initBrowserSync,
   watchFiles
 );
 exports.default = exports.dev;
