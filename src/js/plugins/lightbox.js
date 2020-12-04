@@ -7,15 +7,15 @@ const lightboxes = document.querySelectorAll('.lightbox');
 lightboxes.forEach((item) => {
   // The lightGallery function comes from the lightgallery.js import.
   lightGallery(item, {
+    autoplayFirstVideo: true,
+    download: false,
+    share: false,
+    videoMaxWidth: '1440px',
     youtubePlayerParams: {
       modestbranding: 0,
       showinfo: 0,
       rel: 0,
       controls: 0,
     },
-    share: false,
-    download: false,
-    autoplayFirstVideo: true,
-    videoMaxWidth: '1440px',
   });
 });
