@@ -37,7 +37,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulplog": "^1.0.0",
-    "postcss": "^8.1.10",
+    "postcss": "^8.2.13",
     "postcss-import": "^13.0.0",
     "prettier-plugin-twig-melody": "^0.4.6",
     "prettier-twig-craft-cms": "^0.1.0",
